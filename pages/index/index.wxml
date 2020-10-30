@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+<view class="titlt-text">第一个小程序{{time}}</view>
+<view class="todo_list">
+  <input placeholder="请输入" value="{{val}}" bindinput="handleInput"></input>
+  <button bindtap="addTodo">新增</button>
+  <view wx:for='{{todos}}' wx:key='index'>
+    {{item}}
+  </view>
+</view>
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>
